@@ -12,19 +12,25 @@ public class JdbcTest {
 
         RoleDao roleDao = ac.getBean(RoleDao.class);
 
+//-----------------------------------인설트 부분----------------------------------------------------
         Role role=new Role();
-        role.setRole_id(5);
-        role.setDescription("DataBaseSpringtest");
-        int count = roleDao.insert(role);
-
-        System.out.println(count+"건 입력 하였습니다!");
-
-//        Role resultRole=roleDao.selectById(4);
+//        role.setRole_id(6);
+//        role.setDescription("DataBaseSpringLasttest");
+//        int count = roleDao.insert(role);
+//        System.out.println(count+"건 입력 하였습니다!");
+//-----------------------------------업데이트 부분----------------------------------------------------
+//        role.setRole_id(4);
+//        role.setDescription("resultSpringUpTest");
+//        int upcount= roleDao.update(role);
+//        System.out.println(upcount+"건 수정 하였습니다!");
+//-----------------------------------찾기 부분----------------------------------------------------
+//        Role resultRole=roleDao.selectById(2);
 //
 //        System.out.println(resultRole);
-//
-//        int deleteCount=roleDao.deleteById(3);
-//
-//        System.out.println(deleteCount+"건 삭제 하였습니다!");
+//-----------------------------------삭제 부분----------------------------------------------------
+        int deleteCount=roleDao.deleteById(2);
+
+        System.out.println(deleteCount+"건 삭제 하였습니다!");
+
     }
 }
