@@ -4,6 +4,11 @@ public class Role {
     private int role_id;
     private String description;
 
+    public Role(int role_id, String description) {
+        this.role_id=role_id;
+        this.description=description;
+    }
+
     public int getRole_id() {
         return role_id;
     }
@@ -22,7 +27,6 @@ public class Role {
 
     @Override
     public String toString() {
-        return "Role{" + "role_id=" + role_id + ", description=' " + description + '\''+'}';
+        return "Role{" + "role_id=" + role_id + ", description='" + description + '\''+'}';
     }
-
 }
